@@ -1,0 +1,41 @@
+DotaLatestInfo(): Start the process of getting the information about the Dota 2 Heroes. This will take about 5 minutes! 
+##############################################################################################################################################
+
+get_top5(by,elo): 
+by -> Must be a string. Use 'Pick' for the top 5 most picked heroes and 'Win' for the top 5 heroes with the highest win rate
+
+elo -> Must be a string. Usable elos are:'Crusader', 'Crusader_Archon', 'Legend', 'Ancient', 'Divine_Imortal', 'Crusader', 'Crusader_Archon', 'Legend', 'Ancient', 'Divine_Imortal'. More information about elos in: <https://dota2freaks.com/ranks/>
+
+Returns: Multi index Pandas DataFrame with the top five most picked or with the highest win rate. 
+
+Note: If you want to have a pandas DataFrame with all heroes, please call the object hero_df
+##############################################################################################################################################
+
+get_advantage_disadvantage(hero):
+hero -> Must be a list of strings. Values must be a Hero presented in hero_df.
+
+Returns: Pandas DataFrame with information about the advantages and disadvantages your chosen hero has.
+
+Note: If you want to analyze all hero advantages and disadvantages, please call df advantage and df disadvantage, separately.
+##############################################################################################################################################
+
+get_lane_position(by):
+by -> Must be a list of strings. Values must be a Hero presented in hero_df.
+
+Returns: Multi index Pandas DataFrame with information about Presence, Win Rate, KDA Ratio, GPM,XPM about your chosen hero for each possible Lane position (Mid Lane, OffLane, Safe Lane,Roaming and Jungle).
+
+Note: If you want to analyze every possible combination of lane position for each hero, please call df_lane_position.
+##############################################################################################################################################
+
+get_item_hero(hero):
+hero -> Must be a list of strings. Values must be a Hero presented in hero_df.
+
+Returns: Multi index Pandas DataFrame with information about Win Rate, Item, Matches and Wins for each chosen hero.
+
+Note: If you want to analyze information of all heroes, please call df_item_hero.
+##############################################################################################################################################
+
+item_info(item):
+item -> Must be a list of strings.
+
+Returns: Strings about item information and description.
